@@ -26,9 +26,9 @@
     --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
     --shadow-lg: 0 24px 60px rgba(11, 23, 57, 0.16);
 
-    --font-display: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
-    --font-body: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', sans-serif;
-    --font-logo: 'Cormorant Garamond', 'Zen Kaku Gothic New', serif;
+    --font-display: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif;
+    --font-body: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif;
+    --font-logo: 'Baskerville', Georgia, serif;
 
     --fs-hero: clamp(2rem, 1.1rem + 3.4vw, 3.6rem);
     --fs-xl: clamp(1.9rem, 1.2rem + 2.2vw, 2.75rem);

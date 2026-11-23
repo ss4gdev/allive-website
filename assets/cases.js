@@ -9,7 +9,7 @@ window.ALLIVE_CASES = [
     status: "制作・納品",
     title: "とらふぐ鍋セットなどを、通販サイトで3D・AR表示",
     summary: "とらふぐ鍋セットやてっさ・湯引きなど、実物を撮影して3Dモデルを制作。通販サイトからスマートフォンでAR表示できる形にしました。",
-    image: "assets/torafugu-3d-model.jpg",
+    image: "assets/torafugu-3d-model.webp",
     imageAlt: "とらふぐの切り身と野菜が皿に盛られた、とらふぐ鍋セットの3Dモデル",
     imageCaption: "実際に納品した、とらふぐ鍋セットの3Dモデル画像。",
     video: "",
