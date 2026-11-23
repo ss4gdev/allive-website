@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8f7f3">
+<meta name="robots" content="noindex">
+<meta name="description" content="株式会社ALLIVE。訪問販売と3DAR事業を通じて、関わるすべての人と豊かさを共創します。">
+<title>ALLIVE｜株式会社ALLIVE</title>
+<link rel="icon" href="assets/allive-logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Shippori+Mincho:wght@500;600;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/cases.js"></script>
+<script defer src="assets/site.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#/" aria-label="ALLIVE ホーム">
+      <img class="logo-mark" src="assets/allive-logo.png" width="40" height="40" alt="">
+      <span class="word">ALLIVE</span>
+    </a>
+    <nav aria-label="メインメニュー">
+      <ul class="nav-desktop">
+        <li><a class="nav-link" href="#/business">事業紹介</a></li>
+        <li><a class="nav-link" href="#/cases">3DAR事例</a></li>
+        <li><a class="nav-link" href="#/company">会社情報</a></li>
+        <li><a class="nav-link" href="#/recruit">採用情報</a></li>
+        <li><a class="nav-cta" href="#/contact">お問い合わせ <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-scrim" id="mobileScrim" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="モバイルメニュー" inert>
+  <button class="mobile-nav-close" id="mobileNavClose" type="button" aria-label="メニューを閉じる">×</button>
+  <a href="#/">ホーム</a>
+  <a href="#/business">事業紹介</a>
+  <a href="#/cases">3DAR事例</a>
+  <a href="#/company">会社情報</a>
+  <a href="#/recruit">採用情報</a>
+  <a href="#/contact" class="nav-cta">お問い合わせ</a>
+</nav>
+<main id="main" tabindex="-1">
+<section class="route is-active" data-route="" aria-label="トップページ">
+  <div class="home-hero">
+    <div class="wrap home-hero-grid">
+      <div class="home-hero-copy">
+        <p class="home-kicker">株式会社ALLIVE</p>
+        <h1>関わるすべての人と、<br>豊かさを<em>共創</em>する。</h1>
+        <p class="lede">訪問販売では、暮らしに合ったサービスを。<br class="desktop-break">3DARでは、料理や食品の見た目を立体で伝えます。</p>
+        <div class="action-row">
+          <a class="btn btn-primary" href="#/cases">3DARの事例を見る <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="#/business">事業紹介を見る <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="home-hero-art">
+        <div class="koi-orbit">
+          <span class="orbit-axis" aria-hidden="true"></span>
+          <img class="logo-mark" src="assets/allive-logo.png" width="900" height="900" alt="赤と青の二匹の鯉が円を描くALLIVEのロゴ" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section home-cases" aria-labelledby="home-cases-title">
+    <div class="wrap">
+      <div class="section-row">
+        <h2 id="home-cases-title">3DARの活用事例</h2>
+        <a class="link-arrow" href="#/cases">事例一覧を見る <span aria-hidden="true">→</span></a>
+      </div>
+      <div data-featured-case></div>
+    </div>
+  </section>
+
+  <section class="section home-business" aria-labelledby="home-business-title">
+    <div class="wrap">
+      <div class="section-row">
+        <h2 id="home-business-title">事業紹介</h2>
+        <a class="link-arrow" href="#/business">事業一覧を見る <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="service-grid">
+  <a class="service-card service-card-sales" href="#/business/service-a">
+    <h3>訪問販売</h3>
+    <p>マンションにお住まいの方へ、au ひかり・au でんきなど、暮らしに合うサービスを訪問でご提案します。</p>
+    <span class="text-arrow" aria-hidden="true">→</span>
+  </a>
+  <a class="service-card service-card-ar" href="#/business/3dar">
+    <h3>3DAR事業</h3>
+    <p>実物を撮影して3Dモデルを制作し、通販や飲食店のメニューで料理や食品を立体的に見せます。</p>
+    <span class="text-arrow" aria-hidden="true">→</span>
+  </a>
+</div>
+    </div>
+  </section>
+
+  <section class="section band-dark home-company" aria-labelledby="home-company-title">
+    <div class="wrap home-company-grid">
+      <h2 id="home-company-title">与える人が、<br>豊かになる社会を作る。</h2>
+      <div>
+        <p class="lede">ロゴの二匹の鯉は、お客様と私たちを表しています。互いを信頼し、高め合いながら、共に未来へ進む。ALLIVEは、関わる人と豊かさを分かち合える関係を育てていきます。</p>
+        <a class="btn btn-outline" href="#/company">会社情報を見る <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="home-news-title">
+    <div class="wrap compact-row">
+      <h2 id="home-news-title">お知らせ</h2>
+      <p class="lede">掲載準備中です。</p>
+    </div>
+  </section>
+
+  <section class="section-tight band-subtle" aria-labelledby="home-recruit-title">
+    <div class="wrap contact-band">
+      <div>
+        <h2 id="home-recruit-title">採用情報</h2>
+        <p class="lede">ALLIVEで、一緒に働く仲間を探しています。</p>
+      </div>
+      <a class="btn btn-outline" href="#/recruit">採用情報を見る <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="home-contact-title">
+    <div class="wrap contact-band">
+      <div>
+        <h2 id="home-contact-title">3DARについて相談する</h2>
+        <p class="lede">3Dで見せたい商品や料理、通販サイトや店頭メニューなど、使いたい場面をお聞かせください。</p>
+      </div>
+      <a class="btn btn-primary" href="#/contact?type=3dar">3DARのご相談 <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</section>
+
+<section class="route" data-route="business" aria-label="事業紹介">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><span class="cur">事業紹介</span></p>
+    <div class="page-head">
+      <p class="eyebrow">BUSINESS</p>
+      <h1>事業紹介</h1>
+      <p class="lede">ALLIVEは、挑戦と誠実さで、二つの事業を通じて価値を届けています。</p>
+    </div>
+
+    <div class="service-grid">
+  <a class="service-card service-card-sales" href="#/business/service-a">
+    <h3>訪問販売</h3>
+    <p>マンションにお住まいの方へ、au ひかり・au でんきなど、暮らしに合うサービスを訪問でご提案します。</p>
+    <span class="text-arrow" aria-hidden="true">→</span>
+  </a>
+  <a class="service-card service-card-ar" href="#/business/3dar">
+    <h3>3DAR事業</h3>
+    <p>実物を撮影して3Dモデルを制作し、通販や飲食店のメニューで料理や食品を立体的に見せます。</p>
+    <span class="text-arrow" aria-hidden="true">→</span>
+  </a>
+</div>
+  </div>
+
+  <div class="section band-subtle">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">VALUE</p>
+        <h2>私たちが大切にしていること</h2>
+      </div>
+      <div class="feature-list">
+        <div class="card"><h4><span class="dot"></span>Giver精神</h4><p>誰かの役に立つ価値を自ら惜しみなく提供します。嘘をつかず誠実に向き合い続けることで、揺るぎない信頼の循環を築きます。</p></div>
+        <div class="card"><h4><span class="dot"></span>自ら舵を取り、やり抜く</h4><p>常に当事者意識を持ち、「自分が動かす」姿勢で行動します。引き受けた役割と期待には、最後まで責任を持って応えます。</p></div>
+        <div class="card"><h4><span class="dot"></span>素直に、謙虚に受け止める</h4><p>現状に過信せず、あらゆる意見や変化を素直に受け止めます。関わるすべての人への敬意と謙虚な心を常に忘れません。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="route" data-route="business/3dar" aria-label="3DAR事業">
+  <div class="case-intro">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><a href="#/business">事業紹介</a><span aria-hidden="true">/</span><span class="cur">3DAR事業</span></p>
+      <div class="page-head ar-head">
+        <h1>3DAR事業</h1>
+        <p class="ar-lead">料理や食品の見た目を、<br>スマートフォンで立体的に。</p>
+        <p class="lede">料理や食品を実際に撮影し、角度を変えて見られる3Dモデルにします。水産食品の通販向けには、商品をスマートフォンでAR表示できるコンテンツを制作・納品しました。</p>
+        <div class="action-row">
+          <a class="btn btn-primary" href="#/contact?type=3dar">3DARについて相談する <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="#/cases">事例を見る <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="section-row"><h2>取り組んでいること</h2></div>
+      <div class="grid-3">
+        <div class="card ar-card"><h3>撮影から3Dモデル制作まで</h3><p>料理や食品を複数の角度から撮影し、形や盛り付けが伝わる3Dモデルを制作します。</p></div>
+        <div class="card ar-card"><h3>食品通販向けのAR表示</h3><p>制作したモデルを通販サイトから開けるようにし、対応するスマートフォンで食品をAR表示できるようにしました。</p></div>
+        <div class="card ar-card"><h3>飲食店向けの多言語メニュー開発</h3><p>QRコードからメニューを開き、料理の説明と3D・AR表示を確認できる多言語メニューを開発しています。</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section-tight band-subtle">
+    <div class="wrap">
+      <div class="section-row"><h2>食品通販案件の制作工程</h2></div>
+      <ol class="process-list">
+        <li><h3>商品の撮影</h3><p>とらふぐ鍋セットやてっさ・湯引きなど、実物を複数の角度から撮影。</p></li>
+        <li><h3>3Dモデル制作</h3><p>写真からモデルを作り、ウェブ向けとiPhoneのAR表示向けに書き出し。</p></li>
+        <li><h3>サイト連携・納品</h3><p>通販サイトからモデルを開けるようにし、成果物を納品。</p></li>
+      </ol>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-row">
+        <h2>3DARの活用事例</h2>
+        <a class="link-arrow" href="#/cases">事例一覧を見る <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="case-grid" data-service-cases></div>
+    </div>
+  </section>
+</section>
+
+<section class="route" data-route="cases" aria-label="3DAR事例">
+  <div class="case-intro">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><span class="cur">3DAR事例</span></p>
+      <div class="page-head">
+        <h1>3DARの活用事例</h1>
+        <p class="lede">ALLIVEが撮影・制作を担当した3D・ARの事例をご紹介します。</p>
+      </div>
+    </div>
+  </div>
+  <div class="section-tight">
+    <div class="wrap">
+      <div class="case-grid" data-case-list></div>
+      <div class="action-row case-index-actions">
+        <a class="btn btn-outline" href="#/business/3dar">3DAR事業について <span aria-hidden="true">→</span></a>
+        <a class="btn btn-primary" href="#/contact?type=3dar">3DARについて相談する <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="route" data-route="case-detail" aria-label="3DAR事例詳細">
+  <div data-case-detail></div>
+</section>
+
+<section class="route" data-route="business/service-a" aria-label="訪問販売">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><a href="#/business">事業紹介</a><span>/</span><span class="cur">訪問販売</span></p>
+    <div class="page-head">
+      <div class="service-heading"><h1>訪問販売</h1></div>
+      <p class="lede">マンションにお住まいの皆さまを中心に、au ひかり・au でんきなど、暮らしに欠かせないサービスを、訪問を通じて直接ご提案する事業です。</p>
+      <p class="placeholder-note">※取扱商材・提案エリアは今後変更となる場合があります。</p>
+    </div>
+
+    <div class="feature-list">
+      <div class="card"><h4>取扱商材</h4><p>au ひかり（マンション向け光回線）、au でんき　など</p></div>
+      <div class="card"><h4>提案スタイル</h4><p>一件一件、訪問を通じて丁寧にご説明します。</p></div>
+      <div class="card"><h4>大切にしていること</h4><p>押し売りではなく、暮らしに合うご提案を。</p></div>
+    </div>
+
+    <p style="margin-top:2.75rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a class="btn btn-outline" href="#/business">事業紹介に戻る</a>
+      <a class="btn btn-primary" href="#/contact?type=sales">訪問販売について問い合わせる</a>
+    </p>
+  </div>
+</section>
+
+<section class="route" data-route="company" aria-label="会社概要">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><span class="cur">会社情報</span></p>
+    <div class="page-head">
+      <p class="eyebrow">COMPANY</p>
+      <h1>会社概要</h1>
+      <p class="lede">ALL（すべての人）× ALIVE（自分らしく活きる）。ここでは、私たちの基本情報をご紹介します。</p>
+    </div>
+
+    <section class="company-philosophy" aria-label="企業理念">
+      <p class="quote-line">与える人が、豊かになる社会を作る。</p>
+      <p class="lede">誠実に価値を届ける人が、挑戦と貢献に見合った豊かさを得られる社会へ。私たち自身がまず与える人となり、信頼の循環を生み出していきます。</p>
+    </section>
+
+    <table class="info-table">
+      <tbody>
+        <tr><th>会社名</th><td>ALLIVE（株式会社ALLIVE）</td></tr>
+        <tr><th>創業</th><td>確認中</td></tr>
+        <tr><th>代表者</th><td>代表取締役社長　堀口 天聖</td></tr>
+        <tr><th>本社所在地</th><td>大阪府東大阪市菱屋西1丁目19番303号<br>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8F%B1%E5%B1%8B%E8%A5%BF1%E4%B8%81%E7%9B%AE19%E7%95%AA303%E5%8F%B7" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+            Google MAP
+          </a>
+        </td></tr>
+        <tr><th>事業内容</th><td>訪問販売（au ひかり・au でんき 等）・3DAR事業</td></tr>
+        <tr><th>連絡先</th><td><a class="btn-ghost" href="#/contact">お問い合わせ窓口</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>会社情報</h2></div>
+      <div class="grid-3">
+        <a class="card" href="#/company/message">
+          <h3 style="font-size:1.1rem;margin-bottom:.6rem;">社長挨拶</h3>
+          <p style="color:var(--ink-soft);font-size:var(--fs-sm);">代表からのメッセージをご紹介します。</p>
+        </a>
+        <a class="card" href="#/company/members">
+          <h3 style="font-size:1.1rem;margin-bottom:.6rem;">メンバー紹介</h3>
+          <p style="color:var(--ink-soft);font-size:var(--fs-sm);">ALLIVEを支えるメンバーをご紹介します。</p>
+        </a>
+        <a class="card" href="#/company/access">
+          <h3 style="font-size:1.1rem;margin-bottom:.6rem;">アクセス・地図</h3>
+          <p style="color:var(--ink-soft);font-size:var(--fs-sm);">オフィスの所在地とアクセス方法です。</p>
+        </a>
+      </div>
+      <section class="company-vision" aria-labelledby="company-vision-title">
+        <div class="section-head"><h2 id="company-vision-title">私たちが目指すこと</h2></div>
+        <div class="grid-2">
+          <div class="card ar-card">
+            <h3>社員一人ひとりが社会に必要とされる「人財」へ</h3>
+            <p>社員一人ひとりが社会に必要とされる「人財」へと成長し、その力で社会に貢献し続ける企業になる。</p>
+          </div>
+          <div class="card ar-card">
+            <h3>人々の人生に、潤いを届ける</h3>
+            <p>サービスを通じて、人々の人生に潤いを届け、より良い未来を創造する。</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="route" data-route="company/message" aria-label="社長挨拶">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><a href="#/company">会社情報</a><span>/</span><span class="cur">社長挨拶</span></p>
+    <div class="page-head">
+      <p class="eyebrow">MESSAGE</p>
+      <h1>社長挨拶</h1>
+    </div>
+
+    <div class="president-layout">
+      <div class="president-figure">
+        <div class="president-mark"><img alt="" src="assets/allive-logo.png" width="900" height="900" alt=""></div>
+        <div>
+          <div class="role">代表取締役</div>
+          <div class="name">堀口 天聖</div>
+        </div>
+      </div>
+      <div class="president-body">
+        <p>ALLIVEという社名には、「ALL（すべての人）」×「ALIVE（自分らしく活きる）」という意味を込めています。社員一人ひとりが自分らしく活き、社会から必要とされる未来をつくる——それが、私たちの決意です。</p>
+        <p>私たちのロゴには、対をなす二匹の鯉を描いています。「激流を登りきった鯉は龍になる」という登竜門の故事のように、私たちは高い目標への挑戦を止めません。二匹の鯉は、お客様と私たち自身。互いに信頼し、高め合いながら、共に大きな飛躍を目指しています。</p>
+        <p>私たちが掲げる企業理念は、「与える人が、豊かになる社会を作る。」というものです。誠実に価値を届ける人が正しく報われる仕組みを、まず私たち自身がGiverであることから体現していきます。</p>
+        <p>まだ小さな会社ですが、関わってくださるすべての方に「ここに関わってよかった」と思っていただけるような循環を、これからつくっていきます。今後ともALLIVEをよろしくお願いいたします。</p>
+        <p class="president-sign">代表取締役　堀口 天聖</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="route" data-route="company/members" aria-label="メンバー紹介">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><a href="#/company">会社情報</a><span>/</span><span class="cur">メンバー紹介</span></p>
+    <div class="page-head">
+      <p class="eyebrow">MEMBERS</p>
+      <h1>メンバー紹介</h1>
+      <p class="lede">ALLIVEを支えるメンバーをご紹介します。</p>
+    </div>
+
+    <div class="member-grid">
+      <div class="member-card"><div class="member-avatar" style="background:var(--navy);">堀</div><h3>堀口 天聖</h3><div class="member-role">代表取締役社長</div></div>
+      <div class="member-card"><div class="member-avatar" style="background:var(--lapis);">荒</div><h3>荒谷 周</h3><div class="member-role">事業責任者（訪問販売）</div></div>
+      <div class="member-card"><div class="member-avatar" style="background:var(--red);">大</div><h3>大江 誓生</h3></div>
+      <div class="member-card"><div class="member-avatar" style="background:var(--navy);">富</div><h3>富松 湖太郎</h3><div class="member-role">社員</div></div>
+      <div class="member-card"><div class="member-avatar" style="background:var(--lapis);">小</div><h3>小島 幸志郎</h3><div class="member-role">社員</div></div>
+      <div class="member-card"><div class="member-avatar" style="background:var(--red);">原</div><h3>原田 大叶</h3><div class="member-role">社員</div></div>
+    </div>
+    <p class="placeholder-note">※プロフィール・写真は準備中です。</p>
+  </div>
+</section>
+
+<section class="route" data-route="company/access" aria-label="アクセス・地図">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><a href="#/company">会社情報</a><span>/</span><span class="cur">アクセス・地図</span></p>
+    <div class="page-head">
+      <p class="eyebrow">ACCESS</p>
+      <h1>アクセス・地図</h1>
+    </div>
+
+    <div class="access-layout">
+      <table class="info-table">
+        <tbody>
+          <tr><th>所在地</th><td>大阪府東大阪市菱屋西1丁目19番303号<br>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8F%B1%E5%B1%8B%E8%A5%BF1%E4%B8%81%E7%9B%AE19%E7%95%AA303%E5%8F%B7" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+              Google MAP
+            </a>
+          </td></tr>
+          <tr><th>最寄駅</th><td>確認中</td></tr>
+          
+          <tr><th>受付時間</th><td>平日 9:30〜18:30</td></tr>
+        </tbody>
+      </table>
+      <div class="map-placeholder">
+        <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <span>埋め込み地図は準備中です。上の「Google MAP」リンクから地図をご確認いただけます。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="route" data-route="recruit" aria-label="採用情報">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><span class="cur">採用情報</span></p>
+    <div class="page-head">
+      <p class="eyebrow">RECRUIT</p>
+      <h1>採用情報</h1>
+      <p class="lede">ALLIVEは、「生きた力」を仕事に変えていく仲間を探しています。</p>
+    </div>
+
+    <div class="value-grid">
+      <div class="value-card"><div class="glyph">挑</div><h3>挑み続ける</h3><p>登竜門を登るように、高い目標に挑戦し続ける文化があります。</p></div>
+      <div class="value-card"><div class="glyph">誠</div><h3>誠実であること</h3><p>法人のお客様にも、地域の皆さまにも、誠実に向き合います。</p></div>
+      <div class="value-card"><div class="glyph">与</div><h3>Giverであること</h3><p>与える人が報われる。そんな循環を、社内からも体現しています。</p></div>
+    </div>
+  </div>
+
+  <div class="section band-subtle">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">POSITIONS</p>
+        <h2>募集職種</h2>
+      </div>
+      <div class="position-list">
+        <div class="position-row">
+          <div><h3>営業・事業開発</h3><div class="meta"><span class="chip">正社員</span><span class="chip">未経験可</span></div></div>
+          <a class="btn-ghost" href="#/contact?type=recruit">問い合わせる <span class="arrow">→</span></a>
+        </div>
+        <div class="position-row">
+          <div><h3>エンジニア</h3><div class="meta"><span class="chip">正社員</span><span class="chip">フルリモート可</span><span class="chip">経験者歓迎</span></div></div>
+          <a class="btn-ghost" href="#/contact?type=recruit">問い合わせる <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <p class="placeholder-note">掲載している職種・条件は確認用のサンプルです。</p>
+    </div>
+  </div>
+
+  <div class="section band-dark">
+    <div class="wrap contact-band">
+      <div>
+        <h2>まずは、カジュアルにお話ししませんか。</h2>
+        <p class="lede">応募前のご相談も歓迎です。お気軽にご連絡ください。</p>
+      </div>
+      <a class="btn btn-primary" href="#/contact?type=recruit">お問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+<section class="route" data-route="contact" aria-label="お問い合わせ">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="#/">HOME</a><span>/</span><span class="cur">お問い合わせ</span></p>
+    <div class="page-head">
+      <p class="eyebrow">CONTACT</p>
+      <h1>お問い合わせ</h1>
+      <p class="lede">事業や採用についてのご相談をお聞かせください。</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="card">
+          <h2>3DARのご相談</h2>
+          <p class="lede">3Dで見せたい商品や料理、通販サイトや店頭メニューなどの利用場面がお決まりでしたら、メッセージ欄にご記入ください。</p>
+          <p id="contact-case" class="contact-case" hidden></p>
+        </div>
+      </div>
+
+      <form id="contactForm" aria-describedby="form-note">
+        <div class="form-row-2">
+          <div class="field"><label for="f-company">会社名</label><input id="f-company" type="text" name="company" autocomplete="organization"></div>
+          <div class="field"><label for="f-name">お名前<span class="req">必須</span></label><input id="f-name" type="text" name="name" required autocomplete="name"></div>
+        </div>
+        <div class="form-row-2">
+          <div class="field"><label for="f-email">メールアドレス<span class="req">必須</span></label><input id="f-email" type="email" name="email" required autocomplete="email"></div>
+          <div class="field"><label for="f-type">お問い合わせ種別</label>
+            <select id="f-type" name="type">
+              <option value="">種別を選択</option>
+              <option value="3dar">3DARのご相談</option>
+              <option value="sales">訪問販売について</option>
+              <option value="recruit">採用について</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="f-message">メッセージ<span class="req">必須</span></label><textarea id="f-message" name="message" required></textarea></div>
+        <button type="submit" class="btn btn-primary" disabled>入力内容を確認（デモ）</button>
+        <p class="form-note" id="form-note">確認用フォームです。入力内容は送信されません。</p>
+        <p class="form-success" id="formSuccess" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+  <footer class="site-footer">
+    <div class="wrap">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand"><img class="logo-mark" src="assets/allive-logo.png" width="900" height="900" alt="ALLIVE ロゴ"><span>ALLIVE</span></div>
+      <p class="footer-blurb">「与える人が、豊かになる社会を作る。」ALL × ALIVE ——挑戦と誠実さで、関わるすべての人と豊かさを共創する会社です。</p>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="#/company">会社概要</a></li>
+        <li><a href="#/company/message">社長挨拶</a></li>
+        <li><a href="#/company/members">メンバー紹介</a></li>
+        <li><a href="#/company/access">アクセス・地図</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>BUSINESS</h4>
+      <ul>
+        <li><a href="#/business">事業概要</a></li>
+        <li><a href="#/business/service-a">訪問販売</a></li>
+        <li><a href="#/business/3dar">3DAR事業</a></li>
+        <li><a href="#/cases">3DAR事例</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>MORE</h4>
+      <ul>
+        <li><a href="#/recruit">採用情報</a></li>
+        <li><a href="#/contact">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <small>© ALLIVE Inc.</small>
+    <small>サイト改修プレビュー</small>
+  </div>
+</div>
+
+  </footer>
+<button class="to-top" id="toTop" type="button" aria-label="ページ上部へ戻る" hidden>↑</button>
+</body>
+</html>
