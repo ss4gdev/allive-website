@@ -73,6 +73,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
 }
 .home-hero h1 em { color: #9DC0FF; font-style: normal; }
 .home-hero .lede { color: var(--on-dark-soft); margin: 1.25rem 0 1.85rem; line-height: 1.85; }
+.home-hero-term { white-space: nowrap; }
 .home-hero .btn-outline { border-color: rgb(255 255 255 / 46%); color: #fff; }
 .home-hero .btn-outline:hover { border-color: #fff; background: rgb(255 255 255 / 8%); }
 .home-hero-art { display: grid; place-items: center; }
@@ -361,19 +362,27 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   .brand img { width: 35px; height: 35px; }
   .brand .word { font-size: 1.7rem; }
   .home-hero-grid { min-height: 0; padding-block: 2.75rem; }
+  .home-hero .btn { padding-inline: clamp(.5rem, 2.66vw, .65rem); gap: .4rem; font-size: clamp(.74rem, 3.25vw, .875rem); }
+  .home-hero .btn span[aria-hidden] { font-size: .85rem; }
   .desktop-break { display: none; }
   .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 720px) {
   .home-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 1.15rem;
-    padding-block: 2.15rem 1.55rem;
+    grid-template-columns: minmax(0, 1.72fr) minmax(0, 1fr);
+    grid-template-areas: "message art" "actions actions";
+    align-content: center;
+    gap: 1.15rem clamp(.4rem, 2vw, 1.2rem);
+    min-height: clamp(19rem, 42svh, 25rem);
+    padding-block: clamp(2rem, 7vw, 3.5rem);
   }
-  .home-hero h1 { font-size: clamp(1.65rem, 7.7vw, 2.95rem); }
-  .home-hero .lede { margin: .9rem 0 1.2rem; font-size: 1rem; }
-  .home-hero .btn { padding-inline: .75rem; gap: .4rem; }
-  .home-hero-art .koi-orbit { width: clamp(12.8rem, 61vw, 18rem); }
+  .home-hero-copy { display: contents; }
+  .home-hero-message { grid-area: message; }
+  .home-hero-art { grid-area: art; }
+  .home-hero .action-row { grid-area: actions; gap: .5rem; }
+  .home-hero h1 { font-size: clamp(1.1rem, 5.35vw, 2.25rem); }
+  .home-hero .lede { margin: .75rem 0 0; font-size: clamp(.8125rem, 3.3vw, 1rem); line-height: 1.65; }
+  .home-hero-art .logo-mark { width: 77%; }
   .section-row { margin-bottom: 1.2rem; }
   .home-company { min-block-size: clamp(37rem, 83svh, 46rem); padding-block: 4.5rem; }
   .home-company::before { width: 31rem; inset-inline-end: -13rem; opacity: .08; }
