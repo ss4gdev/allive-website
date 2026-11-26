@@ -71,7 +71,7 @@
     caseDetail.innerHTML = `
       <div class="case-intro">
         <div class="wrap">
-          <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><a href="#/cases">3DAR事例</a><span aria-hidden="true">/</span><span class="cur">事例詳細</span></p>
+          <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><a href="#/cases">3D・AR事例</a><span aria-hidden="true">/</span><span class="cur">事例詳細</span></p>
           <div class="page-head">
             ${caseMeta(study)}
             <h1>${escapeHtml(study.title)}</h1>
@@ -96,7 +96,7 @@
       </div>
       <div class="section-tight band-subtle">
         <div class="wrap contact-band">
-          <div><h2>食品や料理の3DAR制作を相談する</h2><p class="lede">3Dで見せたい商品や料理、利用したい場面をお聞かせください。</p></div>
+          <div><h2>食品や料理の3D・AR制作を相談する</h2><p class="lede">3Dで見せたい商品や料理、利用したい場面をお聞かせください。</p></div>
           <div class="action-row">
             <a class="btn btn-primary" href="${consultationPath(study)}">この事例について相談する ${arrow}</a>
             <a class="btn btn-outline" href="#/cases">事例一覧に戻る</a>
@@ -128,6 +128,7 @@
     const [requestedPath, query = ""] = location.hash.slice(1).split("?");
     const params = new URLSearchParams(query);
     let path = requestedPath.replace(/^\//, "").replace(/\/$/, "");
+    if (path === "business/service-a") path = "business/lifeline";
     if (path === "business/service-b") path = "business/3dar";
     const study = casesByPath.get(path);
     const route = study ? "case-detail" : path;
@@ -151,7 +152,8 @@
     });
 
     if (visibleRoute === "contact") {
-      contactType.value = params.get("type") ?? "";
+      const requestedType = params.get("type");
+      contactType.value = requestedType === "sales" ? "lifeline" : (requestedType ?? "");
       if (contactType.selectedIndex < 0) contactType.value = "";
       const sourceCase = casesById.get(params.get("case"));
       contactCase.hidden = !sourceCase;
@@ -161,7 +163,7 @@
     }
 
     const heading = section.querySelector("h1");
-    document.title = visibleRoute ? heading.textContent.trim() + "｜ALLIVE" : "ALLIVE｜株式会社ALLIVE";
+    document.title = visibleRoute ? heading.textContent.trim() + "｜ALLIVE" : "ALLIVE";
     const wasMenuOpen = !mobileNav.inert;
     setMobileNav(false);
     if (focusHeading || wasMenuOpen) {
@@ -210,4 +212,20 @@
   form.querySelector('[type="submit"]').disabled = false;
 
   render(false);
+
+  if ("IntersectionObserver" in window && !reducedMotion.matches) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.remove("reveal-pending");
+        entry.target.classList.add("is-revealed");
+        revealObserver.unobserve(entry.target);
+      }
+    }, { rootMargin: "-72px 0px -48px 0px", threshold: 0.12 });
+
+    document.querySelectorAll("[data-scroll-reveal]").forEach((element) => {
+      element.classList.add("reveal-pending");
+      revealObserver.observe(element);
+    });
+  }
 })();
