@@ -1,5 +1,4 @@
 :root {
-  --ink-faint: #5c687a;
   --maxw: 1376px;
   --radius-sm: 5px;
   --radius-md: 10px;
@@ -46,7 +45,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   display: inline-flex;
   align-items: center;
   gap: .7rem;
-  color: var(--lapis);
+  color: var(--interactive);
   font-size: var(--fs-sm);
   font-weight: 700;
 }
@@ -54,7 +53,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
 .link-arrow span { font-size: 1.1rem; line-height: 1; }
 
 .home-hero {
-  background: radial-gradient(120% 140% at 82% 8%, var(--navy) 0%, var(--navy-deep) 58%);
+  background: radial-gradient(120% 140% at 82% 8%, var(--dark-surface-muted) 0%, var(--dark-surface) 58%);
   color: var(--on-dark);
 }
 .home-hero-inner {
@@ -70,7 +69,13 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   line-height: 1.37;
   text-wrap: initial;
 }
-.home-hero h1 em { color: #9DC0FF; font-style: normal; }
+.home-hero h1 em, .home-philosophy em {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: .065em;
+  text-underline-offset: .14em;
+}
 .home-hero .lede { color: var(--on-dark-soft); margin: 1.25rem 0 1.85rem; line-height: 1.85; }
 .home-hero-term { white-space: nowrap; }
 .home-hero .btn-outline { border-color: rgb(255 255 255 / 46%); color: #fff; }
@@ -94,8 +99,8 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   min-block-size: clamp(42rem, 88svh, 58rem);
   padding-block: clamp(5rem, 9vw, 9rem);
   background:
-    radial-gradient(ellipse at 90% 65%, rgb(30 80 162 / 39%), transparent 62%),
-    linear-gradient(124deg, #101d41, var(--navy-deep) 79%);
+    radial-gradient(ellipse at 90% 65%, rgb(255 255 255 / 10%), transparent 62%),
+    linear-gradient(124deg, #202020, var(--dark-surface) 79%);
 }
 .home-company::before {
   content: "";
@@ -107,9 +112,8 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   inset-block-start: 50%;
   inset-inline-end: -8%;
   transform: translateY(-48%) rotate(-14deg);
-  background: url("allive-logo.webp") center / contain no-repeat;
+  background: url("allive-logo-monochrome.webp") center / contain no-repeat;
   mix-blend-mode: screen;
-  filter: grayscale(1);
   opacity: .12;
   pointer-events: none;
 }
@@ -139,7 +143,6 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   text-wrap: balance;
 }
 .home-philosophy span { display: block; }
-.home-philosophy em { color: #9DC0FF; font-style: normal; }
 .home-company-description {
   --scroll-reveal-delay: 160ms;
   max-width: 40rem;
@@ -147,7 +150,9 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   line-height: 1.9;
 }
 .home-company-action { --scroll-reveal-delay: 230ms; margin-top: 1.6rem; }
-.home-company .btn-outline:focus-visible { outline-color: #9DC0FF; }
+.home-hero :focus-visible, .home-company :focus-visible, .site-footer :focus-visible {
+  outline-color: var(--on-dark);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   [data-scroll-reveal].reveal-pending { opacity: 0; }
@@ -202,7 +207,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   align-items: center;
   gap: .8rem;
   margin-bottom: 1rem;
-  color: var(--lapis);
+  color: var(--interactive);
   font-size: clamp(1.3rem, 2.3vw, 1.85rem);
 }
 .company-principles h2::before {
@@ -220,7 +225,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   word-break: auto-phrase;
   text-wrap: balance;
 }
-.principles-statement em { color: var(--lapis); font-style: normal; }
+.principles-statement em { color: var(--red); font-style: normal; }
 .principles-mission .lede { max-width: 44rem; margin-top: 1.25rem; }
 .principles-groups {
   display: grid;
@@ -248,7 +253,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   padding: clamp(1.15rem, 2.5vw, 1.8rem);
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-inline-start: 3px solid var(--lapis);
+  border-inline-start: 3px solid var(--interactive);
   border-radius: var(--radius-sm);
 }
 .principles-vision-panels h3 {
@@ -264,14 +269,14 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   gap: 1px;
   overflow: hidden;
   border-radius: var(--radius-sm);
-  background: var(--navy);
+  background: var(--dark-surface-muted);
 }
 .principles-value-panels li {
   display: grid;
   place-items: center;
   min-block-size: 6rem;
   padding: .85rem clamp(.6rem, 1.4vw, 1rem);
-  background: var(--navy-deep);
+  background: var(--dark-surface);
   color: var(--on-dark);
   font-family: var(--font-display);
   font-size: clamp(1.03rem, 1.65vw, 1.25rem);
@@ -294,14 +299,14 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   width: 40px;
   height: 40px;
   align-self: flex-end;
-  color: var(--lapis);
+  color: var(--interactive);
   border-radius: 50%;
   border: 1px solid var(--border-strong);
   font-size: 1.1rem;
   margin-top: auto;
   transition: background .2s, color .2s;
 }
-.service-card:hover .text-arrow { background: var(--lapis); color: #fff; }
+.service-card:hover .text-arrow { background: var(--interactive); color: #fff; }
 .service-description .lede + .lede { margin-top: .85rem; }
 .business-case-link { display: flex; justify-content: flex-end; margin-top: 1.15rem; }
 
@@ -317,13 +322,13 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   overflow: hidden;
   transition: border-color .2s, box-shadow .2s;
 }
-.case-card:hover { border-color: #a6b7cd; box-shadow: var(--shadow-md); }
+.case-card:hover { border-color: var(--border-strong); box-shadow: var(--shadow-md); }
 .case-card-featured {
   grid-template: auto / minmax(0, 1.24fr) minmax(0, 1fr);
 }
 .case-card-text-only { grid-template-rows: auto; }
 .case-card-text-only .case-card-copy { max-width: 50rem; }
-.case-card-media { overflow: hidden; display: block; background: var(--navy-deep); }
+.case-card-media { overflow: hidden; display: block; background: var(--dark-surface); }
 .case-card-media img {
   width: 100%;
   height: 100%;
@@ -344,15 +349,15 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   align-items: center;
   flex-wrap: wrap;
   gap: .3rem .85rem;
-  color: var(--lapis);
+  color: var(--interactive);
   font-size: var(--fs-sm);
   font-weight: 700;
 }
 .case-status {
   padding: .05rem .5rem;
   border-radius: 3px;
-  background: #e8eef7;
-  color: #214577;
+  background: var(--bg-subtle);
+  color: var(--ink);
   font-size: var(--fs-xs);
 }
 .case-card h2, .case-card h3 {
@@ -365,7 +370,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
 .case-card p { color: var(--ink-soft); }
 .case-card .link-arrow { margin-top: 1.35rem; }
 .case-card:not(.case-card-featured) .link-arrow { margin-top: auto; padding-top: 1.2rem; }
-.case-intro { background: #f1f4f9; border-bottom: 1px solid var(--border); }
+.case-intro { background: var(--bg-subtle); border-bottom: 1px solid var(--border); }
 .case-intro .page-head { padding-block: 1.25rem clamp(2.25rem, 5vw, 4.5rem); }
 .case-intro .page-head .lede { max-width: 46rem; }
 .case-intro .page-head h1 { margin-top: .5rem; }
@@ -383,7 +388,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   width: 100%;
   height: auto;
   border-radius: var(--radius-md);
-  background: var(--navy-deep);
+  background: var(--dark-surface);
 }
 .case-detail-figure figcaption {
   margin-top: .65rem;
@@ -401,7 +406,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   font-size: clamp(1.4rem, 2.7vw, 2.1rem);
   margin-top: .65rem;
   line-height: 1.55;
-  color: var(--lapis);
+  color: var(--interactive);
 }
 .ar-head .action-row { margin-top: 1.5rem; }
 .ar-card h3 { margin-bottom: .6rem; font-size: 1.25rem; }
@@ -413,7 +418,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   padding-left: 1.5rem;
 }
 .process-list li { padding: .35rem .75rem .5rem .2rem; }
-.process-list li::marker { color: var(--lapis); font-weight: 700; }
+.process-list li::marker { color: var(--interactive); font-weight: 700; }
 .process-list h3 { margin-bottom: .4rem; font-size: 1.15rem; }
 
 .route:has(> .wrap:last-child) { padding-bottom: clamp(3rem, 5.5vw, 5rem); }
