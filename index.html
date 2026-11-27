@@ -9,9 +9,9 @@
 <title>ALLIVE</title>
 <link rel="icon" href="assets/allive-logo-small.webp" type="image/webp">
 <link rel="stylesheet" href="assets/base.css">
-<link rel="stylesheet" href="assets/site.css?v=b1041f5bf3">
+<link rel="stylesheet" href="assets/site.css?v=99a9b220e6">
 <script defer src="assets/cases.js"></script>
-<script defer src="assets/site.js"></script>
+<script defer src="assets/site.js?v=8fd3c558e0"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へスキップ</a>
@@ -26,7 +26,6 @@
       <ul class="nav-desktop">
         <li><a class="nav-link" href="#/company">会社情報</a></li>
         <li><a class="nav-link" href="#/business">事業紹介</a></li>
-        <li><a class="nav-link" href="#/cases">3D・AR事例</a></li>
         <li><a class="nav-link" href="#/recruit">採用情報</a></li>
         <li><a class="nav-cta" href="#/contact">お問い合わせ <span aria-hidden="true">↗</span></a></li>
       </ul>
@@ -41,7 +40,6 @@
   <a href="#/">ホーム</a>
   <a href="#/company">会社情報</a>
   <a href="#/business">事業紹介</a>
-  <a href="#/cases">3D・AR事例</a>
   <a href="#/recruit">採用情報</a>
   <a href="#/contact" class="nav-cta">お問い合わせ</a>
 </nav>
@@ -56,7 +54,7 @@
         </div>
         <div class="action-row">
           <a class="btn btn-primary" href="#/business">事業紹介を見る <span aria-hidden="true">→</span></a>
-          <a class="btn btn-outline" href="#/cases">3D・AR事例を見る <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="#/business/3dar">3D・AR事業を見る <span aria-hidden="true">→</span></a>
         </div>
       </div>
       <div class="home-hero-art">
@@ -82,30 +80,15 @@
     </div>
   </section>
 
-  <section class="section-tight" aria-labelledby="home-people-title">
-    <div class="wrap" data-scroll-reveal>
-      <div class="section-row">
-        <h2 id="home-people-title">代表・メンバー</h2>
-        <a class="link-arrow" href="#/company/members">メンバー紹介を見る <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="grid-2">
-        <article class="card home-person">
-          <div class="member-avatar" aria-hidden="true">堀</div>
-          <div>
-            <p class="member-role">代表</p>
-            <h3>堀口 天聖</h3>
-            <p>誠実に価値を届ける人が正しく報われる仕組みを、まず私たち自身がGiverであることから体現していきます。</p>
-            <a class="link-arrow" href="#/company/message">代表挨拶を読む <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="card home-person">
-          <div class="member-avatar" aria-hidden="true">荒</div>
-          <div>
-            <p class="member-role">ライフライン事業責任者</p>
-            <h3>荒谷 周</h3>
-            <p>個人のお客様や事業者様に向けたライフライン事業を担当しています。</p>
-          </div>
-        </article>
+  <section class="section home-president" aria-labelledby="home-president-title">
+    <div class="wrap home-president-layout" data-scroll-reveal>
+      <h2 id="home-president-title">代表メッセージ</h2>
+      <div>
+        <blockquote class="home-president-quote">
+          <p>誠実に価値を届ける人が正しく報われる仕組みを、まず私たち自身がGiverであることから体現していきます。</p>
+        </blockquote>
+        <p class="home-president-sign"><span>代表</span> 堀口 天聖</p>
+        <a class="link-arrow" href="#/company/message">代表挨拶を読む <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -136,16 +119,6 @@
           </div>
         </a>
       </div>
-    </div>
-  </section>
-
-  <section class="section home-cases" aria-labelledby="home-cases-title">
-    <div class="wrap" data-scroll-reveal>
-      <div class="section-row">
-        <h2 id="home-cases-title">3D・ARの活用事例</h2>
-        <a class="link-arrow" href="#/cases">事例一覧を見る <span aria-hidden="true">→</span></a>
-      </div>
-      <div data-featured-case></div>
     </div>
   </section>
 
@@ -180,17 +153,20 @@
     </div>
 
     <div class="service-grid">
-  <a class="service-card service-card-lifeline" href="#/business/lifeline">
-    <h3>ライフライン事業</h3>
-    <p>ご家庭や店舗に合った光回線・電気・ガス・ウォーターサーバーをご案内し、お申し込みまでサポートします。</p>
-    <span class="text-arrow" aria-hidden="true">→</span>
-  </a>
-  <a class="service-card service-card-ar" href="#/business/3dar">
-    <h3>3D・AR事業</h3>
-    <p>飲食店向けに、スマートフォンで料理の大きさや盛り付けを確かめられる3D・ARメニューを制作します。</p>
-    <span class="text-arrow" aria-hidden="true">→</span>
-  </a>
-</div>
+      <a class="service-card service-card-lifeline" href="#/business/lifeline">
+        <h3>ライフライン事業</h3>
+        <p>ご家庭や店舗に合った光回線・電気・ガス・ウォーターサーバーをご案内し、お申し込みまでサポートします。</p>
+        <span class="text-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="service-card service-card-ar" href="#/business/3dar">
+        <h3>3D・AR事業</h3>
+        <p>飲食店向けに、スマートフォンで料理の大きさや盛り付けを確かめられる3D・ARメニューを制作します。</p>
+        <span class="text-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <p class="business-case-link">
+      <a class="link-arrow" href="#/cases">3D・ARの活用事例を見る <span aria-hidden="true">→</span></a>
+    </p>
   </div>
 
   <div class="section band-subtle">
@@ -246,7 +222,7 @@
 <section class="route" data-route="cases" aria-label="3D・AR事例">
   <div class="case-intro">
     <div class="wrap">
-      <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><span class="cur">3D・AR事例</span></p>
+      <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><a href="#/business">事業紹介</a><span aria-hidden="true">/</span><span class="cur">3D・AR事例</span></p>
       <div class="page-head">
         <h1>3D・ARの活用事例</h1>
         <p class="lede">ALLIVEが撮影・制作を担当した3D・ARの事例をご紹介します。</p>
@@ -311,7 +287,7 @@
     <table class="info-table">
       <tbody>
         <tr><th>名称</th><td>ALLIVE</td></tr>
-        <tr><th>創業</th><td>確認中</td></tr>
+        <tr><th>創業</th><td>2026年</td></tr>
         <tr><th>代表者</th><td>堀口 天聖</td></tr>
         <tr><th>所在地</th><td>大阪府東大阪市菱屋西1-19-17 302号室<br>
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8F%B1%E5%B1%8B%E8%A5%BF1-19-17" target="_blank" rel="noopener">
@@ -549,7 +525,6 @@
         <li><a href="#/business">事業概要</a></li>
         <li><a href="#/business/lifeline">ライフライン事業</a></li>
         <li><a href="#/business/3dar">3D・AR事業</a></li>
-        <li><a href="#/cases">3D・AR事例</a></li>
       </ul>
     </div>
     <div class="footer-col">

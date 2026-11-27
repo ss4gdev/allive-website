@@ -7,7 +7,6 @@
   const sections = new Map(
     Array.from(document.querySelectorAll("[data-route]"), (section) => [section.dataset.route, section])
   );
-  const featuredCase = cases[0];
   const caseDetail = document.querySelector("[data-case-detail]");
   const main = document.getElementById("main");
   const toggle = document.getElementById("navToggle");
@@ -71,7 +70,7 @@
     caseDetail.innerHTML = `
       <div class="case-intro">
         <div class="wrap">
-          <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><a href="#/cases">3D・AR事例</a><span aria-hidden="true">/</span><span class="cur">事例詳細</span></p>
+          <p class="breadcrumb"><a href="#/">ホーム</a><span aria-hidden="true">/</span><a href="#/business">事業紹介</a><span aria-hidden="true">/</span><a href="#/cases">3D・AR事例</a><span aria-hidden="true">/</span><span class="cur">事例詳細</span></p>
           <div class="page-head">
             ${caseMeta(study)}
             <h1>${escapeHtml(study.title)}</h1>
@@ -106,7 +105,6 @@
   }
 
   const noCases = '<p class="lede">事例は掲載準備中です。</p>';
-  document.querySelector("[data-featured-case]").innerHTML = featuredCase ? caseCard(featuredCase, "h3", true) : noCases;
   document.querySelector("[data-service-cases]").innerHTML = cases.slice(0, 2).map((study) => caseCard(study, "h3", cases.length === 1)).join("") || noCases;
   document.querySelector("[data-case-list]").innerHTML = cases.map((study) => caseCard(study, "h2", cases.length === 1)).join("") || noCases;
 
@@ -141,10 +139,11 @@
     if (study) showCase(study);
 
     sections.forEach((item) => item.classList.toggle("is-active", item === section));
+    const isBusinessCase = visibleRoute === "cases" || visibleRoute === "case-detail";
     sectionLinks.forEach((link) => {
       const target = link.getAttribute("href").slice(2);
       const isCurrent = visibleRoute === target;
-      const isParent = (visibleRoute === "case-detail" && target === "cases")
+      const isParent = (isBusinessCase && target === "business")
         || (Boolean(target) && visibleRoute.startsWith(target + "/"));
       link.classList.toggle("is-active", isCurrent || isParent);
       if (isCurrent) link.setAttribute("aria-current", "page");

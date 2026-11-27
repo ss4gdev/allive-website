@@ -128,7 +128,6 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   margin-bottom: 1.65rem;
 }
 .section-row h2 { font-size: var(--fs-xl); line-height: 1.42; }
-.home-cases { background: var(--bg-subtle); padding-top: clamp(2.5rem, 4.5vw, 4.5rem); }
 .home-business { border-top: 1px solid var(--border); }
 .home-company {
   position: relative;
@@ -206,10 +205,35 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   }
 }
 
-.home-person { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start; }
-.home-person .member-avatar { width: 52px; height: 52px; margin: 0; }
-.home-person h3 { font-size: 1.35rem; margin-bottom: .4rem; }
-.home-person .link-arrow { display: inline-flex; margin-top: .75rem; }
+.home-president {
+  background: var(--bg-elevated);
+  padding-block: clamp(4.25rem, 8.8vw, 8rem);
+}
+.home-president-layout {
+  --maxw: 1230px;
+  display: grid;
+  grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
+  gap: clamp(1.4rem, 6vw, 5rem);
+  align-items: start;
+}
+.home-president h2 { font-size: var(--fs-xl); line-height: 1.42; }
+.home-president h2::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  margin-bottom: 1rem;
+  background: var(--red);
+}
+.home-president-quote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.35vw, 1.9rem);
+  line-height: 1.75;
+  word-break: auto-phrase;
+}
+.home-president-sign { margin: 1.4rem 0 1.25rem; font-weight: 700; }
+.home-president-sign span { margin-right: .5rem; color: var(--ink-soft); font-size: var(--fs-sm); }
 
 .service-card { position: relative; }
 .service-card, .service-card-copy { padding: clamp(1.45rem, 3vw, 2.55rem); }
@@ -234,6 +258,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
 }
 .service-card:hover .text-arrow { background: var(--lapis); color: #fff; }
 .service-description .lede + .lede { margin-top: .85rem; }
+.business-case-link { display: flex; justify-content: flex-end; margin-top: 1.15rem; }
 
 .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.55rem; }
 .case-grid:has(> .case-card:only-child) { grid-template-columns: minmax(0, 1fr); }
@@ -387,6 +412,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   .home-company { min-block-size: clamp(37rem, 83svh, 46rem); padding-block: 4.5rem; }
   .home-company::before { width: 31rem; inset-inline-end: -13rem; opacity: .08; }
   .home-philosophy { font-size: clamp(1.92rem, 7.6vw, 3.25rem); }
+  .home-president-layout { grid-template-columns: 1fr; }
   .case-grid, .case-card-featured, .case-detail-layout { grid-template-columns: 1fr; }
   .case-card-featured { grid-template-rows: auto 1fr; }
   .case-card-media img { aspect-ratio: 16 / 10; }
