@@ -235,6 +235,48 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
 .home-president-sign { margin: 1.4rem 0 1.25rem; font-weight: 700; }
 .home-president-sign span { margin-right: .5rem; color: var(--ink-soft); font-size: var(--fs-sm); }
 
+.home-principles {
+  background: var(--bg-subtle);
+  padding-block: clamp(4.25rem, 8.8vw, 8rem);
+}
+.home-principles-inner { --maxw: 1230px; }
+.home-principles h2 {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: 1rem;
+  color: var(--lapis);
+  font-size: clamp(1.3rem, 2.3vw, 1.85rem);
+}
+.home-principles h2::before {
+  content: "";
+  width: 1.65rem;
+  height: 2px;
+  background: var(--red);
+}
+.home-principles-mission { padding-bottom: clamp(2rem, 5vw, 4rem); }
+.home-principles-mission p {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4.15vw, 3.6rem);
+  line-height: 1.45;
+  letter-spacing: -.025em;
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
+.home-principles-mission em { color: var(--lapis); font-style: normal; }
+.home-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 7vw, 6rem);
+  border-top: 1px solid var(--border-strong);
+  padding-top: clamp(1.8rem, 4vw, 3.2rem);
+}
+.home-principles-list { margin: 0; padding-inline-start: 1.3rem; font-size: var(--fs-body-lg); }
+ul.home-principles-list { list-style: disc; }
+.home-principles-list li { padding-inline-start: .25rem; }
+.home-principles-list li + li { margin-top: .6rem; }
+.home-principles-list li::marker { color: var(--lapis); font-weight: 700; }
+
 .service-card { position: relative; }
 .service-card, .service-card-copy { padding: clamp(1.45rem, 3vw, 2.55rem); }
 .service-card-photo { padding: 0; gap: 0; overflow: hidden; }
@@ -413,6 +455,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   .home-company::before { width: 31rem; inset-inline-end: -13rem; opacity: .08; }
   .home-philosophy { font-size: clamp(1.92rem, 7.6vw, 3.25rem); }
   .home-president-layout { grid-template-columns: 1fr; }
+  .home-principles-grid { grid-template-columns: 1fr; }
   .case-grid, .case-card-featured, .case-detail-layout { grid-template-columns: 1fr; }
   .case-card-featured { grid-template-rows: auto 1fr; }
   .case-card-media img { aspect-ratio: 16 / 10; }
