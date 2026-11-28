@@ -174,6 +174,76 @@
     toTop.classList.remove("is-visible");
   }
 
+  function setupHeroSlideshow() {
+    const hero = document.querySelector(".home-hero");
+    const photos = Array.from(hero.querySelectorAll(".home-hero-photo"));
+    const controls = hero.querySelector(".home-hero-controls");
+    const dots = Array.from(controls.querySelectorAll(".home-hero-dot"));
+    const autoplay = controls.querySelector(".home-hero-autoplay");
+    let currentIndex = 0;
+    let requestedIndex = 0;
+    let requestId = 0;
+    let rotationTimer;
+    let playing = !reducedMotion.matches;
+    let inView = !("IntersectionObserver" in window);
+
+    function scheduleRotation() {
+      window.clearTimeout(rotationTimer);
+      if (!playing || !inView || document.hidden || !sections.get("").classList.contains("is-active")) return;
+      rotationTimer = window.setTimeout(() => showPhoto((requestedIndex + 1) % photos.length), 6500);
+    }
+
+    async function showPhoto(index) {
+      requestedIndex = index;
+      const request = ++requestId;
+      const photo = photos[index];
+      if (!photo.hasAttribute("src")) photo.src = photo.dataset.src;
+      try {
+        await photo.decode();
+        if (request !== requestId) return;
+        currentIndex = index;
+        photos.forEach((item) => item.classList.toggle("is-current", item === photo));
+        dots.forEach((button, dotIndex) => button.setAttribute("aria-pressed", String(dotIndex === index)));
+      } catch {
+        // Keep the visible photo when the next one fails to load.
+      }
+      if (request === requestId) scheduleRotation();
+    }
+
+    function setPlaying(enabled) {
+      if (!enabled && playing) {
+        requestId += 1;
+        requestedIndex = currentIndex;
+      }
+      playing = enabled;
+      autoplay.dataset.playing = String(playing);
+      autoplay.setAttribute("aria-label", playing
+        ? "背景写真の自動切り替えを一時停止"
+        : "背景写真の自動切り替えを再生");
+      scheduleRotation();
+    }
+
+    dots.forEach((button, index) => button.addEventListener("click", () => {
+      setPlaying(false);
+      showPhoto(index);
+    }));
+    autoplay.addEventListener("click", () => setPlaying(!playing));
+    reducedMotion.addEventListener("change", (event) => setPlaying(!event.matches));
+    document.addEventListener("visibilitychange", scheduleRotation);
+    window.addEventListener("hashchange", scheduleRotation);
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(([entry]) => {
+        inView = entry.intersectionRatio >= .2;
+        scheduleRotation();
+      }, { threshold: .2 });
+      observer.observe(hero);
+    }
+
+    controls.hidden = false;
+    setPlaying(playing);
+  }
+
   window.addEventListener("hashchange", () => {
     if (location.hash !== "#main") render(true);
   });
@@ -211,6 +281,7 @@
   form.querySelector('[type="submit"]').disabled = false;
 
   render(false);
+  setupHeroSlideshow();
 
   if ("IntersectionObserver" in window && !reducedMotion.matches) {
     const revealObserver = new IntersectionObserver((entries) => {

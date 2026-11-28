@@ -9,9 +9,9 @@
 <title>ALLIVE</title>
 <link rel="icon" href="assets/allive-logo-monochrome-small.webp" type="image/webp">
 <link rel="stylesheet" href="assets/base.css?v=e6e601fe48">
-<link rel="stylesheet" href="assets/site.css?v=de93dc38c6">
+<link rel="stylesheet" href="assets/site.css?v=b4045fcd49">
 <script defer src="assets/cases.js"></script>
-<script defer src="assets/site.js?v=8fd3c558e0"></script>
+<script defer src="assets/site.js?v=99ff667c0e"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へスキップ</a>
@@ -46,6 +46,11 @@
 <main id="main" tabindex="-1">
 <section class="route is-active" data-route="" aria-label="トップページ">
   <div class="home-hero">
+    <div class="home-hero-backdrop" aria-hidden="true">
+      <img class="home-hero-photo is-current" src="assets/hero-city.webp" width="1440" height="810" alt="" loading="lazy" decoding="async" fetchpriority="high">
+      <img class="home-hero-photo home-hero-engineering" data-src="assets/hero-engineering-bright.webp" width="1440" height="810" alt="" decoding="async">
+      <img class="home-hero-photo home-hero-sales" data-src="assets/hero-sales-conversation.webp" width="1440" height="960" alt="" decoding="async">
+    </div>
     <div class="wrap home-hero-inner">
       <div class="home-hero-copy">
         <h1>関わるすべての人と、<br>豊かさを<em>共創</em>する。</h1>
@@ -54,6 +59,12 @@
           <a class="btn btn-primary" href="#/business">事業紹介を見る <span aria-hidden="true">→</span></a>
           <a class="btn btn-outline" href="#/business/3dar">3D・AR事業を見る <span aria-hidden="true">→</span></a>
         </div>
+      </div>
+      <div class="home-hero-controls" role="group" aria-label="背景写真の切り替え" hidden>
+        <button class="home-hero-dot" type="button" aria-label="ビル街の写真を表示" aria-pressed="true"></button>
+        <button class="home-hero-dot" type="button" aria-label="エンジニアの写真を表示" aria-pressed="false"></button>
+        <button class="home-hero-dot" type="button" aria-label="営業の写真を表示" aria-pressed="false"></button>
+        <button class="home-hero-autoplay" type="button" aria-label="背景写真の自動切り替えを一時停止"></button>
       </div>
     </div>
   </div>
@@ -276,8 +287,8 @@
         <tr><th>名称</th><td>ALLIVE</td></tr>
         <tr><th>創業</th><td>2026年</td></tr>
         <tr><th>代表者</th><td>堀口 天聖</td></tr>
-        <tr><th>所在地</th><td>大阪府東大阪市菱屋西1-19-17 302号室<br>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8F%B1%E5%B1%8B%E8%A5%BF1-19-17" target="_blank" rel="noopener">
+        <tr><th>所在地</th><td>大阪府東大阪市菱屋西1-19-15<br>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8F%B1%E5%B1%8B%E8%A5%BF1-19-15" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
             Google MAP
           </a>
@@ -298,19 +309,34 @@
       <div class="principles-groups">
         <div data-scroll-reveal>
           <h2>Vision</h2>
-          <ul class="principles-vision-panels" role="list">
+          <ul class="principles-panels" role="list">
             <li><h3>社員一人ひとりが社会に必要とされる<span>「人財」へ</span></h3><p>社員一人ひとりが社会に必要とされる「人財」へと成長し、その力で社会に貢献し続ける企業になる。</p></li>
             <li><h3>人々の人生に、潤いを届ける</h3><p>サービスを通じて、人々の人生に潤いを届け、より良い未来を創造する。</p></li>
           </ul>
         </div>
         <div data-scroll-reveal>
           <h2>Value</h2>
-          <ol class="principles-value-panels" role="list">
-            <li>誠実であれ</li>
-            <li>挑戦者であれ</li>
-            <li>人を想い、人に尽くせ</li>
-            <li>圧倒的にやり抜け</li>
-            <li>羨望の対象であれ</li>
+          <ol class="principles-panels principles-value-panels" role="list">
+            <li>
+              <h3>1.誠実であれ</h3>
+              <p>嘘をつかず、責任を持ち、誰に対しても誠実に向き合う。信頼はすべての成果の土台である。</p>
+            </li>
+            <li>
+              <h3>2.挑戦者であれ</h3>
+              <p>現状に満足せず、自ら考え、自ら行動し、失敗を恐れず挑み続ける。</p>
+            </li>
+            <li>
+              <h3>3.人を想い、人に尽くせ</h3>
+              <p>仲間にも、お客様にも、思いやりと笑顔を忘れず、期待を超える価値を届ける。</p>
+            </li>
+            <li>
+              <h3>4.圧倒的にやり抜け</h3>
+              <p>全力で取り組み、諦めず、粘り強く継続する。その積み重ねが本物の実力になる。</p>
+            </li>
+            <li>
+              <h3>5.羨望の対象であれ</h3>
+              <p>学び続け、謙虚であり続け、自らの姿勢で人を惹きつける”かっこいい人”を目指す。</p>
+            </li>
           </ol>
         </div>
       </div>
@@ -377,9 +403,9 @@
     <div class="member-grid">
       <div class="member-card"><div class="member-avatar" style="background:var(--dark-surface-muted);">堀</div><h3>堀口 天聖</h3><div class="member-role">代表</div></div>
       <div class="member-card"><div class="member-avatar" style="background:var(--interactive);">荒</div><h3>荒谷 周</h3><div class="member-role">事業責任者（ライフライン事業）</div></div>
-      <div class="member-card"><div class="member-avatar" style="background:var(--red);">大</div><h3>大江 誓生</h3></div>
-      <div class="member-card"><div class="member-avatar" style="background:var(--red);">原</div><h3>原田 大叶</h3><div class="member-role">社員</div></div>
-      <div class="member-card"><div class="member-avatar" aria-hidden="true">高</div><h3>高藤大地</h3><div class="member-role">社員</div></div>
+      <div class="member-card"><div class="member-avatar" style="background:var(--red);">大</div><h3>大江 誓生</h3><div class="member-role">エンジニア</div></div>
+      <div class="member-card"><div class="member-avatar" style="background:var(--red);">原</div><h3>原田 大叶</h3><div class="member-role">インターン</div></div>
+      <div class="member-card"><div class="member-avatar" aria-hidden="true">高</div><h3>高藤 大地</h3><div class="member-role">インターン</div></div>
     </div>
     <p class="placeholder-note">※プロフィール・写真は準備中です。</p>
   </div>
@@ -396,8 +422,8 @@
     <div class="access-layout">
       <table class="info-table">
         <tbody>
-          <tr><th>所在地</th><td>大阪府東大阪市菱屋西1-19-17 302号室<br>
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8F%B1%E5%B1%8B%E8%A5%BF1-19-17" target="_blank" rel="noopener">
+          <tr><th>所在地</th><td>大阪府東大阪市菱屋西1-19-15<br>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8F%B1%E5%B1%8B%E8%A5%BF1-19-15" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
               Google MAP
             </a>
